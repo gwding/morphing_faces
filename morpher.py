@@ -127,7 +127,7 @@ class Morpher(object):
         A_1 = numpy.dot(X, self.e_W_0) + self.e_b_0
         H_1 = numpy.where(A_1 > 0.0, A_1, 0.0 * A_1)
 
-        A_2 = numpy.dot(H_1, self.e_W_1) + self.d_b_1
+        A_2 = numpy.dot(H_1, self.e_W_1) + self.e_b_1
         H_2 = numpy.where(A_2 > 0.0, A_2, 0.0 * A_2)
 
         Z = numpy.dot(H_2, self.e_W_2) + self.e_b_2
